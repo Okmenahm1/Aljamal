@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataproject3.HelloController">
+   <children>
+      <Button fx:id="insertMartyrButton" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleInsertMartyrAction" text="Insert Martyrs" />
+      <ComboBox fx:id="comboBoxdistrict" layoutX="124.0" layoutY="26.0" onAction="#handleComboDistrictAction" prefWidth="150.0" promptText="District" />
+      <ComboBox fx:id="comboBoxlocation" layoutX="303.0" layoutY="26.0" onAction="#handleComboLocationAction" prefWidth="150.0" promptText="Locations" />
+      <TextField fx:id="martyrnametext" alignment="CENTER" layoutX="110.0" layoutY="110.0" promptText="Martyr Name" />
+      <TextField fx:id="agetext" layoutX="309.0" layoutY="110.0" />
+      <TextField fx:id="districttext" alignment="CENTER" editable="false" layoutX="97.0" layoutY="166.0" promptText="District" />
+      <Label layoutX="8.0" layoutY="114.0" text="MartyrName" />
+      <Label layoutX="278.0" layoutY="114.0" text="Age" />
+      <TextField fx:id="locationtext" alignment="CENTER" editable="false" layoutX="290.0" layoutY="167.0" promptText="Locations" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="483.0" layoutY="164.0" mnemonicParsing="false" text="Female" />
+      <RadioButton fx:id="maleRadioButton" layoutX="483.0" layoutY="121.0" mnemonicParsing="false" text="Male" />
+      <Button fx:id="deletebutton" layoutX="37.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleDeleteMartyrAction" text="Delete" />
+      <ComboBox fx:id="combonamesdelete" layoutX="124.0" layoutY="228.0" onAction="#handleComboMartyrsAction" prefWidth="150.0" />
+      <Button fx:id="sizebutt" layoutX="31.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleTreeSizeAction" text="Get Size" />
+      <TextField fx:id="sizetext" alignment="CENTER" editable="false" layoutX="227.0" layoutY="302.0" promptText="Size Of the Tree" />
+      <Button fx:id="highetbutt" layoutX="111.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleTreeHeghitAction" text="Get Highet" />
+      <TextField fx:id="highettext" alignment="CENTER" layoutX="397.0" layoutY="302.0" promptText="Highet Of The Tree" />
+      <TableView fx:id="tableView1" layoutX="282.0" layoutY="359.0" prefHeight="200.0" prefWidth="447.0">
+         <columns>
+            <TableColumn fx:id="hashTableColumn" prefWidth="442.0" text="Tree Data" />
+         </columns>
+      </TableView>
+      <Button fx:id="printbutt" layoutX="208.0" layoutY="376.0" mnemonicParsing="false" text="Print" />
+      <Label fx:id="datelabel" layoutX="506.0" layoutY="31.0" text="You Are Inserting In : " />
+      <TextField fx:id="martyrtodelete" editable="false" layoutX="311.0" layoutY="228.0" />
+   </children>
+</AnchorPane>

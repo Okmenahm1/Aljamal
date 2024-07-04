@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataproject3.HelloController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="menuItemOpen" mnemonicParsing="false" onAction="#handleMenuItemOpenAction" text="Open…" />
+                        <MenuItem fx:id="menuItemSaveAs" mnemonicParsing="false" onAction="#handleMenuItemSaveAsAction" text="Save As…" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="415.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView fx:id="backgroundImageView" fitHeight="437.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true" />
+                <DatePicker fx:id="datePicker1" layoutX="121.0" layoutY="14.0" prefHeight="25.0" prefWidth="131.0" />
+                <DatePicker fx:id="datePicker2" layoutX="114.0" layoutY="57.0" />
+                <DatePicker fx:id="datePicker3" layoutX="310.0" layoutY="57.0" />
+                <Button fx:id="updateDateButton" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleUpdateDateButtonAction" text="Update Date" />
+                <Button fx:id="deleteButton" layoutX="20.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Delete" />
+                <DatePicker fx:id="datePicker4" layoutX="100.0" layoutY="108.0" />
+                <TableView fx:id="tableView" layoutX="360.0" layoutY="93.0" prefHeight="228.0" prefWidth="280.0" styleClass=".slide-rotate-hor-top {-webkit-animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}" stylesheets="">
+                    <columns>
+                        <TableColumn fx:id="hashTableColumn" prefWidth="279.0" text="Hash Table" />
+                    </columns>
+                </TableView>
+                <Button fx:id="prevButton" layoutX="58.0" layoutY="309.0" mnemonicParsing="false" onAction="#handlePrevButtonAction" text="Up" />
+                <Button fx:id="nextButton" layoutX="121.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleNextButtonAction" text="Down" />
+                <TextField fx:id="districtTextField" alignment="CENTER" editable="false" layoutX="178.0" layoutY="195.0" promptText="DISTRICT" />
+                <TextField fx:id="locationTextField" alignment="CENTER" editable="false" layoutX="89.0" layoutY="240.0" promptText="LOCATION" />
+                <TextField fx:id="totalMartyrsTextFiled" alignment="CENTER" editable="false" layoutX="13.0" layoutY="195.0" promptText="Total Martyrs" />
+                <Button fx:id="LoadButton" layoutX="284.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleLoadButton" text="Load" />
+                <Button fx:id="printButton" layoutX="274.0" layoutY="251.0" mnemonicParsing="false" onAction="#handlePrintButtonAction" text="Print Data" />
+                <Button fx:id="insertNewDateButton" layoutX="4.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleInsertNewDateButtonAction" text="Insert New Date" />
+            <TextField fx:id="datenextprevtxt" alignment="CENTER" editable="false" layoutX="104.0" layoutY="159.0" promptText="Date" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
